@@ -1,0 +1,43 @@
+.header {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 6em;
+    padding: 5px 4.2%;
+    border-bottom: 0.001em solid #e5e5e3;
+}
+
+.header .logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.header .logo img {
+    height: 3.5em;
+    width: auto;
+    transition: all 0.3s;
+    border-radius: 30px;
+}
+
+.header .logo img:hover {
+    transform: scale(1.07);
+}
+
+
+
+.header .btn button{
+    margin-left: 1.25em;
+    font-weight:  700;
+    color: #cbd5e1;
+    padding: 9px 25px;
+    background: #1e293b;
+    border: 1px solid #94a3b8;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+} 
+
+.header .btn button:hover{
+    transform: scale(1.07);
+} 

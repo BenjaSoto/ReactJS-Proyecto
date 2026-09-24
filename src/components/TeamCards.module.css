@@ -1,0 +1,21 @@
+.teamContainer {
+    width: 100%;
+    margin-top: 2em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    border-top: 1px solid #333333;
+}
+
+.teamTitulo {
+    color: white;
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+
+.cardsWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}

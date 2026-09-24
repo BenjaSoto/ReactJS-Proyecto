@@ -1,0 +1,78 @@
+.footer {
+    background-color:#0f172a;
+    padding: 1.5%;
+    display: flex;
+    border-top: 2px solid;
+    border-color: #94a3b8;
+}
+
+.empresa,
+.nosotros,
+.help,
+.legal{
+    
+    color: #cbd5e1;
+    
+}
+
+.footContainer{
+    width: 100%;
+    padding: 3%;
+    text-align: left;
+}
+
+.footContainer h2{
+    color: white;
+    margin-bottom: 0.7em ;
+    
+}
+
+.footContainer p{
+    color:#94a3b8;
+    
+
+}
+
+.footContainer ul {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.footContainer ul li{
+    list-style: none;
+    padding-bottom: 0.3em;
+    text-align: left;
+}
+
+.footContainer ul li a{
+    text-decoration: none;
+    list-style: none;
+    color:#94a3b8;
+}
+
+.footContainerLogos{
+    padding-top: 1em;
+    display: flex;
+    width: 100%;
+    gap: 0.4em;
+}
+.footContainerLogos img{
+    width: 1.7em;
+    height: auto;
+    align-items: center;
+}
+
+footer hr{
+    border-top: 1px solid #94a3b8;
+    width: 95%;
+    margin: 0 auto;
+}
+.derechosReservados{
+    color: #94a3b8;
+    margin: 0 auto;
+    width: 95%;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+    
+}
