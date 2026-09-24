@@ -13,11 +13,11 @@ const Footer = () => {
                 <div className={style.footContainerLogos}>
                     <div className={style.logoFooter}>
                         <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer">
-                        <img src="/public/contactos/whatsapp.svg" alt="logo whatsapp"/></a>
+                        <img src="/contactos/whatsapp.svg" alt="logo whatsapp"/></a>
                     </div>
                     <div className={style.logoFooter}>
                         <a href="http://instagram.com" target="_blank" rel="noopener noreferrer">
-                        <img src="/public/contactos/instagram.svg" alt="logo instagram" />
+                        <img src="/contactos/instagram.svg" alt="logo instagram" />
                         
                         </a>
                     </div>
