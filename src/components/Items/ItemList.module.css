@@ -1,0 +1,10 @@
+.prdCards{
+    border-radius: 0.75em;
+    overflow: hidden;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 14px;         
+    padding: 1em 0;
+    
+}
+

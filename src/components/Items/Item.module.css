@@ -1,0 +1,86 @@
+.card{
+    border-radius: 0.75em;
+    overflow: hidden;
+    height: auto;
+    width: calc(25% - 14px);
+    flex: 0 0 calc(25% - 14px);
+}
+
+.card .cardImg{
+    width: 100%;
+    overflow: hidden;     
+    background-color: #1e1e1e; 
+    width:100%;
+    height:10rem;
+    padding:15px;
+    background:#1e1e1e;
+}
+
+.cardImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;    
+    object-position: center; 
+}
+
+.cardContent{
+    padding: 7%;
+    /*background-color:  #2a2733;*/
+    background: linear-gradient(135deg, #2a2733 0%, #1a1a2e 100%);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cardPrecio{
+    margin-top: auto;
+    display: flex;
+    padding-top: 0.8em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardBtns {
+    display: flex;
+    gap: 6px;
+}
+
+.cardPrecio a{
+    text-decoration: none;
+}
+
+.cardContent .btnCard button{
+    color: #ffffff;
+    background-color: #534AB7;
+    border: none;
+    border-radius: 0.4em;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.cardContent .btnCard button:hover{
+    color: white;
+    background-color: #6259c9;
+    transform: scale(1.1);
+}
+
+
+.cardPrecio p{
+    color: #ffffff;
+}
+
+.cardContent h3 {
+    color: #ffffff;
+    line-height: 1.3;
+    display: -webkit-box;
+    --webkit-line-clamp: 2;   
+    --webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.6em;
+}
+.cardContent p{
+    color: #666666;
+}
+
