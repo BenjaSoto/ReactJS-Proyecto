@@ -16,7 +16,7 @@ export function Item({nombre, precio, stock}) {
                             <div className={style.cardBtns}>
                                 <a href="#" className={style.btnCard}><button>-</button></a>
                                 <a href="#" className={style.btnCard}><button>+</button></a>
-                            </div>
+                            </div> 
                         </div>
                     </div>
         </div>
