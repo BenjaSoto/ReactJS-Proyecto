@@ -5,6 +5,7 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 import Layout from "./components/layout/Layout";
 import { ItemListContainer } from './components/Items/ItemListContainer'
+import { DetalleItemContainer } from './components/DetalleItems/DetalleItemContainer'
 
 
 function App() {
@@ -13,8 +14,7 @@ function App() {
   return (
     <>
       <Layout>
-        <h1>Hola mundo</h1>
-        <p>Mis productos</p>
+        <DetalleItemContainer idProducto={2}/>
         <ItemListContainer Mensaje="Nuestros productos destacados"/>
       </Layout>
     </>

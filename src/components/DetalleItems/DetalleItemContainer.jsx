@@ -1,11 +1,9 @@
-import { ItemList } from "./ItemList";
-import style from "./ItemListContainer.module.css"
-import React, { useState, useEffect } from 'react';
 
+import { useState, useEffect } from "react";
+import DetalleItem from "./DetalleItem";
 
-
-export function ItemListContainer({ Mensaje }) {
-    const [productos, setProductos] = useState([]);
+export function DetalleItemContainer({idProducto}) {
+    const [producto, setProducto] = useState([]);
     const [error, setError] = useState(null);
     const [cargando, setCargando] = useState(true);
     useEffect(() => {
@@ -13,10 +11,15 @@ export function ItemListContainer({ Mensaje }) {
             .then((respuesta) => {
                 if (!respuesta.ok) {
                     throw new Error('No se pudo cargar la información de los productos');}
-                return respuesta.json();
+                return respuesta.json() ;
             })
             .then((datos) => {
-                setProductos(datos);
+                const itemEncontrado = datos.find((item) => item.id === idProducto);
+                if (itemEncontrado) {
+                    setProducto(itemEncontrado);
+                } else {
+                    setError("El producto no existe");
+                }
             })
             .catch((error) => {
                 setError(error.message);
@@ -35,9 +38,8 @@ export function ItemListContainer({ Mensaje }) {
     return (
         <div>
 
-            <div className={style.productos}>
-                <h2>{Mensaje}</h2>
-                <ItemList productos={productos} />
+            <div>
+                <DetalleItem {...producto} />
             </div>
         </div>
     );
