@@ -105,7 +105,7 @@
     color: #94a3b8;
 }
 
-@media  (max-width: 768px) and (min-width: 375px){
+@media  (max-width: 768px){
     .detalle{
         display: flex;
         flex-direction: column;
@@ -129,12 +129,15 @@
 }
 
 
-@media (max-width: 375px) {
+@media (min-width: 375px) {
 
     .detalleContent{
         padding: 2em;
         overflow-wrap: break-word;
         word-wrap: break-word;
+    }
+    .detalle{
+        padding: 0;
     }
 
 }
