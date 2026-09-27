@@ -1,11 +1,15 @@
 
 import { useState, useEffect } from "react";
 import DetalleItem from "./DetalleItem";
+import { useParams } from "react-router-dom";
 
-export function DetalleItemContainer({idProducto}) {
+export function DetalleItemContainer() {
     const [producto, setProducto] = useState([]);
     const [error, setError] = useState(null);
     const [cargando, setCargando] = useState(true);
+
+    //hook
+    const {idProducto} = useParams();
     useEffect(() => {
         fetch('/data/productos.json')
             .then((respuesta) => {
@@ -14,7 +18,7 @@ export function DetalleItemContainer({idProducto}) {
                 return respuesta.json() ;
             })
             .then((datos) => {
-                const itemEncontrado = datos.find((item) => item.id === idProducto);
+                const itemEncontrado = datos.find((item) => item.id === Number(idProducto));
                 if (itemEncontrado) {
                     setProducto(itemEncontrado);
                 } else {
@@ -27,7 +31,7 @@ export function DetalleItemContainer({idProducto}) {
             .finally(() => {
                 setCargando(false);
             });
-    }, []);
+    }, [idProducto]);
 
     if (cargando) {
         return <p>Cargando productos, por favor espere...</p>;

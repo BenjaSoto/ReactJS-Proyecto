@@ -1,12 +1,13 @@
 import style from "./Nav.module.css"
-
+import { Link } from "react-router-dom";
 const Nav = () => {
     return (
         <nav>
             <ul className={style.navLinks}>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#contactos">Contactos</a></li>
+                
+                <li><Link to="/">Inicio</Link></li>
+                <li><Link to="/productos">Productos</Link></li>
+                <li><Link to="/">Contactos</Link></li>
             </ul>
         </nav>
     )

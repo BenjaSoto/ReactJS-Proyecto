@@ -6,17 +6,20 @@ import './App.css'
 import Layout from "./components/layout/Layout";
 import { ItemListContainer } from './components/Items/ItemListContainer'
 import { DetalleItemContainer } from './components/DetalleItems/DetalleItemContainer'
+import { Routes, Route } from 'react-router-dom'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <Layout>
-        <DetalleItemContainer idProducto={2}/>
-        <ItemListContainer Mensaje="Nuestros productos destacados"/>
-      </Layout>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path='/' element={<h1>Inicio</h1>}/>
+          <Route path='/productos' element={<ItemListContainer/>}/>
+          <Route path='/producto/:idProducto' element={<DetalleItemContainer />}/>
+        </Route>
+      </Routes>
+
     </>
   )
 }
