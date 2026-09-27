@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import TeamCards from "../TeamCards";
 import style from "./Footer.module.css"
 
@@ -26,7 +27,7 @@ const Footer = () => {
             <div className={`${style.footContainer} ${style.nosotros}`}>
                 <h2>Tienda</h2>
                 <ul>
-                    <li><a href="">Todos los productos</a></li>
+                    <li><Link to="/productos">Todos los productos</Link></li>
                     <li><a href="">Novedades</a></li>
                     <li><a href="">Ofertas</a></li>
                     <li><a href="">Mas vendidos</a></li>
