@@ -1,20 +1,21 @@
 import Nav from "./Nav";
 import style from "./Header.module.css"
-const Header = () =>{
+import { Link } from "react-router-dom";
+const Header = () => {
 
-    return(
+    return (
         <header className={style.header}>
-        <div className={style.logo}>
-            <img src="/logo.png" alt="Logo de la marca"/>
-        </div>
-        
-        <Nav/>
-        
-        <a href="#" className={style.btn}><button>Login</button></a>
+            <div className={style.logo}>
+                <img src="/logo.png" alt="Logo de la marca" />
+            </div>
 
-        <a href="carrito.html" className={style.btn}>
-        <button>Ver Carrito</button>
-        </a>
+            <Nav />
+
+            <a href="#" className={style.btn}><button>Login</button></a>
+
+            <Link to="/carrito" className={style.btn}>
+                <button>Ver Carrito</button>
+            </Link>
         </header>
     )
 }
