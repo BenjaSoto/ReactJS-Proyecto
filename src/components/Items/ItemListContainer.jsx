@@ -16,7 +16,8 @@ export function ItemListContainer({ Mensaje }) {
                 return respuesta.json();
             })
             .then((datos) => {
-                setProductos(datos);
+                const productosConStock = datos.filter((item) => item.stock > 0);
+                setProductos(productosConStock);
             })
             .catch((error) => {
                 setError(error.message);
