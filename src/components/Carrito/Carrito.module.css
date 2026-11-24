@@ -1,5 +1,103 @@
 .carrito {
-    padding: 3rem;
-    color: white;
-    text-align: center
+    background-color: var(--crema);
+    min-height: 60vh;
+    padding: 3rem 1.5rem;
+    color: var(--texto);
+    text-align: center;
+}
+
+.lista {
+    list-style: none;
+    max-width: 900px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.75em;
+    background: var(--superficie);
+    border: 1px solid var(--borde-suave);
+    box-shadow: var(--sombra-suave);
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    background-color: #ffffff;
+    border: 1px solid var(--borde-suave);
+    border-radius: 0.4em;
+    padding: 5px;
+}
+
+.info {
+    flex: 1 1 200px;
+}
+
+.info p {
+    color: var(--texto-suave);
+}
+
+.cantidad {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cantidad button,
+.eliminar,
+.btn {
+    font-weight: 700;
+    color: var(--azul-2);
+    padding: 8px 18px;
+    background: transparent;
+    border: 1px solid var(--borde-input);
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+}
+
+.cantidad button:enabled:hover,
+.eliminar:hover {
+    transform: scale(1.07);
+    border-color: var(--azul-2);
+}
+
+.btn:hover {
+    transform: scale(1.07);
+}
+
+.acciones .btn:last-child,
+.carrito > .btn {
+    background: var(--ambar);
+    border-color: var(--ambar);
+    color: var(--azul);
+}
+
+.acciones .btn:last-child:hover,
+.carrito > .btn:hover {
+    background: var(--ambar-hover);
+    border-color: var(--ambar-hover);
+}
+
+.cantidad button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.acciones {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
 }

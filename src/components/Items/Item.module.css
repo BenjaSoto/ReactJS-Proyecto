@@ -6,7 +6,9 @@
     flex: 0 0 calc(25% - 14px);
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0.3em 0.5em  rgba(0,0,0,0.4);
+    background-color: var(--superficie);
+    border: 1px solid var(--borde-suave);
+    box-shadow: var(--sombra-suave);
 
 }
 
@@ -29,8 +31,7 @@
 .cardContent{
     padding: 7%;
     
-    /*background-color:  #2a2733;*/
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    background: var(--superficie);
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -45,42 +46,18 @@
     padding-top: 0.8em;
     justify-content: space-between;
     align-items: center;
-}
-
-.cardBtns {
-    display: flex;
-    gap: 6px;
-}
-
-.cardPrecio a{
-    text-decoration: none;
-}
-
-.cardContent .btnCard button{
-    
-    background-color: transparent;
-    color: #94a3b8;
-    border: 1px solid #94a3b8;
-    border-radius: 0.4em;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    width: 2.5em;
-    height: 2.5em;
-}
-
-.cardContent .btnCard button:hover{
-    color: #0f172a;
-    background-color: #94a3b8;
-    transform: scale(1.1);
+    gap: 4px;
+    flex-wrap: nowrap;
 }
 
 
 .cardPrecio p{
-    color: #ffffff;
+    color: var(--texto);
+    font-weight: 700;
 }
 
 .cardContent h3 {
-    color: #ffffff;
+    color: var(--texto);
     line-height: 1.3;
     display: -webkit-box;
     -webkit-line-clamp: 2;   
@@ -95,9 +72,16 @@
 }
 
 .cardContent p{
-    color: #94a3b8;
+    color: var(--texto-suave);
 }
 
+
+@media (max-width: 1100px) and (min-width: 769px){
+    .card{
+    width: calc(33.333% - 14px);
+    flex: 0 0 calc(33.333% - 14px);
+}
+}
 
 @media  (max-width: 768px) and (min-width: 425px){
     .card{
@@ -115,4 +99,18 @@
         flex: 0 0 calc(100% - 14px);
     }
 
+}
+
+.sinStock {
+    padding: 2px 6px;
+    border-radius: 50px;
+    white-space: nowrap;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: var(--peligro-fondo);
+    color: var(--peligro) !important;
+    border: 1px solid var(--peligro-borde);
+    font-size: 0.65rem;
+    font-weight: 700;
 }

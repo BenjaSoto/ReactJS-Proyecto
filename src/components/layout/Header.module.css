@@ -41,3 +41,86 @@
 .header .btn button:hover{
     transform: scale(1.07);
 } 
+
+.header .btnSuelto {
+    margin-left: 1.25em;
+    font-weight: 700;
+    color: #cbd5e1;
+    padding: 9px 25px;
+    background: #1e293b;
+    border: 1px solid #94a3b8;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.header .btnSuelto:hover {
+    transform: scale(1.07);
+}
+
+.buscador {
+    position: relative;
+    margin-left: 1.25em;
+}
+
+.buscador input {
+    width: 220px;
+    padding: 8px 32px 8px 14px;
+    border: 1px solid #94a3b8;
+    border-radius: 50px;
+    background: #1e293b;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.buscador input::placeholder {
+    color: #94a3b8;
+}
+
+.buscador input:focus {
+    outline: 2px solid #f59e0b;
+    outline-offset: 1px;
+}
+
+.buscador button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+.saludo {
+    margin-left: 1.25em;
+    color: #cbd5e1;
+    font-size: 0.9rem;
+}
+
+.contador {
+    margin-left: 8px;
+    padding: 1px 8px;
+    border-radius: 50px;
+    background: #94a3b8;
+    color: #0f172a;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+    .header {
+        flex-wrap: wrap;
+        height: auto;
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .header .logo {
+        margin-right: 0;
+    }
+
+    .buscador {
+        margin-left: 0;
+    }
+}

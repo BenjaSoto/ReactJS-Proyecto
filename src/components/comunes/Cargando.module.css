@@ -1,0 +1,5 @@
+.contenedor {
+    padding: 4rem 1rem;
+    color: var(--texto-suave);
+    background-color: var(--crema);
+}

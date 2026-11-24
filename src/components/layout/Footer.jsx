@@ -7,6 +7,7 @@ const Footer = () => {
 
     <footer>
         <TeamCards/>
+        <div className={style.zonaOscura}>
         <div className={style.footer}>
             <div className={`${style.footContainer} ${style.empresa}`}>
                 <h2>Empresa</h2>
@@ -55,6 +56,7 @@ const Footer = () => {
 
         <hr></hr>
         <p className={style.derechosReservados}>© 2026 Empresa. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
   )

@@ -1,0 +1,85 @@
+.contenedor {
+    background-color: var(--crema);
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 1rem;
+}
+
+.formulario {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 2rem;
+    border-radius: 0.75em;
+    background: var(--superficie);
+    border: 1px solid var(--borde-suave);
+    box-shadow: var(--sombra-suave);
+    text-align: left;
+    color: var(--texto-suave);
+}
+
+.formulario h2 {
+    color: var(--texto);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.formulario input {
+    padding: 10px 14px;
+    border: 1px solid var(--borde-input);
+    border-radius: 0.4em;
+    background: var(--superficie);
+    color: var(--texto);
+    font-size: 1rem;
+}
+
+.formulario input:focus {
+    outline: 2px solid var(--ambar);
+    outline-offset: 1px;
+}
+
+.formulario button {
+    margin-top: 0.8rem;
+    font-weight: 700;
+    color: var(--azul);
+    padding: 10px 25px;
+    background: var(--ambar);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.formulario button:enabled:hover {
+    background: var(--ambar-hover);
+    transform: scale(1.04);
+}
+
+.formulario button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.error {
+    color: var(--peligro);
+    background-color: var(--peligro-fondo);
+    border: 1px solid var(--peligro-borde);
+    border-radius: 0.4em;
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+.enlace {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.enlace a {
+    color: var(--ambar-texto);
+    font-weight: 700;
+}

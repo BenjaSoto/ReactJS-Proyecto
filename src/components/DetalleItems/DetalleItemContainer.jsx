@@ -1,50 +1,43 @@
-
 import { useState, useEffect } from "react";
-import DetalleItem from "./DetalleItem";
 import { useParams } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase/config";
+import DetalleItem from "./DetalleItem";
+import Cargando from "../comunes/Cargando";
+import MensajeError from "../comunes/MensajeError";
 
 export function DetalleItemContainer() {
-    const [producto, setProducto] = useState([]);
+    const [producto, setProducto] = useState(null);
     const [error, setError] = useState(null);
     const [cargando, setCargando] = useState(true);
 
-    //hook
-    const {idProducto} = useParams();
+    const { idProducto } = useParams();
+
     useEffect(() => {
-        fetch('/data/productos.json')
-            .then((respuesta) => {
-                if (!respuesta.ok) {
-                    throw new Error('No se pudo cargar la información de los productos');}
-                return respuesta.json() ;
-            })
-            .then((datos) => {
-                const itemEncontrado = datos.find((item) => item.id === Number(idProducto));
-                if (itemEncontrado) {
-                    setProducto(itemEncontrado);
+        const obtenerProducto = async () => {
+            setCargando(true);
+            setError(null);
+            try {
+                const respuesta = await getDoc(doc(db, "productos", idProducto));
+
+                if (respuesta.exists()) {
+                    setProducto({ ...respuesta.data(), id: respuesta.id });
                 } else {
-                    setError("El producto no existe");
+                    setError("El producto no existe.");
                 }
-            })
-            .catch((error) => {
-                setError(error.message);
-            })
-            .finally(() => {
+            } catch (err) {
+                console.error(err);
+                setError("No se pudo cargar el producto. Intentá de nuevo más tarde.");
+            } finally {
                 setCargando(false);
-            });
+            }
+        };
+
+        obtenerProducto();
     }, [idProducto]);
 
-    if (cargando) {
-        return <p>Cargando productos, por favor espere...</p>;
-    }
-    if (error) {
-        return <p>Error: {error}</p>;
-    }
-    return (
-        <div>
+    if (cargando) return <Cargando mensaje="Cargando producto..." />;
+    if (error) return <MensajeError mensaje={error} />;
 
-            <div>
-                <DetalleItem {...producto} />
-            </div>
-        </div>
-    );
+    return <DetalleItem {...producto} />;
 }
