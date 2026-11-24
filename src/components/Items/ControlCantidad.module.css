@@ -1,0 +1,35 @@
+.control {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.control span {
+    min-width: 1.3em;
+    text-align: center;
+    color: var(--texto);
+    font-weight: 700;
+}
+
+.control button {
+    background-color: transparent;
+    color: var(--azul-2);
+    border: 1px solid var(--borde-input);
+    border-radius: 0.4em;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    width: 2.2em;
+    height: 2.2em;
+}
+
+.control button:enabled:hover {
+    color: var(--azul);
+    background-color: var(--ambar);
+    border-color: var(--ambar);
+    transform: scale(1.1);
+}
+
+.control button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}

@@ -1,19 +1,42 @@
 .card {
-    background-color: #0f172a; 
+    background-color: var(--superficie);
     padding: 1.5em;
     border-radius: 8px;
     text-align: center;
     width: 200px;
-    border: 1px solid #334155;
+    border: 1px solid var(--borde-suave);
+    box-shadow: var(--sombra-suave);
 }
 
 .card h4 {
-    color: white;
+    color: var(--texto);
     margin: 0 0 0.5em 0;
 }
 
 .card p {
-    color: #94a3b8; 
+    color: var(--texto-suave);
     margin: 0;
     font-size: 0.9em;
+}
+
+.foto {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 0.8em;
+    display: block;
+    border: 2px solid var(--borde-suave);
+}
+
+.enlace {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.15s, border-color 0.15s;
+}
+
+.enlace:hover {
+    transform: translateY(-3px);
+    border-color: var(--ambar);
 }

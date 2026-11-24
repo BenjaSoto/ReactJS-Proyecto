@@ -4,7 +4,7 @@ export function ItemList({productos}){
     return(
         <div className={style.prdCards}>
             {productos.map(prod => (
-                <Item key={prod.key} {...prod} />
+                <Item key={prod.id} {...prod} />
             ))}
         </div>
     )
