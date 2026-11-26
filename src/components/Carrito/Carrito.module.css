@@ -83,6 +83,11 @@
     color: var(--azul);
 }
 
+.carrito > .btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+}
+
 .acciones .btn:last-child:hover,
 .carrito > .btn:hover {
     background: var(--ambar-hover);
